@@ -1,0 +1,31 @@
+{
+    "name": "la-haute-societe/yii2-flysystem-google-drive",
+    "description": "Flysystem Google Drive filesystem for Yii2",
+    "type": "yii2-extension",
+    "keywords": [
+        "yii2",
+        "extension",
+        "flysystem",
+        "filesystem",
+        "file",
+        "google",
+        "drive"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alban Jubert",
+            "email": "alban@lahautesociete.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "creocoder/yii2-flysystem": "~0.8.1",
+        "nao-pon/flysystem-google-drive": "~1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "lhs\\Yii2FlysystemGoogleDrive\\": ""
+        }
+    }
+}
