@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist la-haute-societe/yii2-flysystem-google-drive "*"
+composer require --prefer-dist la-haute-societe/yii2-flysystem-google-drive "~1.0.0"
 ```
 
 or add
