@@ -20,11 +20,11 @@ use yii\base\InvalidConfigException;
  **/
 class GoogleDriveFilesystem extends Filesystem
 {
-
     public $clientId;
     public $clientSecret;
     public $refreshToken;
     public $rootFolderId;
+    public $driveId;
 
     /**
      * @inheritdoc
@@ -56,6 +56,12 @@ class GoogleDriveFilesystem extends Filesystem
         $client->setClientSecret($this->clientSecret);
         $client->refreshToken($this->refreshToken);
         $service = new Google_Service_Drive($client);
-        return new GoogleDriveAdapter($service, $this->rootFolderId); // Dossier chantier
+
+        $options = [];
+        if (isset($this->driveId)) {
+            $options['teamDriveId'] = $this->driveId;
+        }
+
+        return new GoogleDriveAdapter($service, $this->rootFolderId, $options);
     }
 }
