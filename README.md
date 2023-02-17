@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist la-haute-societe/yii2-flysystem-google-drive "~1.0.0"
+composer require --prefer-dist la-haute-societe/yii2-flysystem-google-drive "^1.0.0"
 ```
 
 or add
 
 ```
-"la-haute-societe/yii2-flysystem-google-drive": "~1.0.0"
+"la-haute-societe/yii2-flysystem-google-drive": "^1.0.0"
 ```
 
 to the require section of your `composer.json` file.
@@ -31,7 +31,7 @@ For usage instructions, see [Yii2 Flysystem documentation](https://github.com/cr
 
 You can get help on how to get clientID, clientSecret and refreshToken [here](https://github.com/ivanvermeyen/laravel-google-drive-demo/blob/master/README.md#create-your-google-drive-api-keys) (Thx @ivanvermeyen)
 
-Configuring
+Configuration
 -----------
 
 ### Local filesystem
@@ -44,10 +44,11 @@ return [
     'components' => [
         //...
         'googleDrive' => [
-            'class' => 'lhs\Yii2FlysystemGoogleDrive',
+            'class' =>  lhs\Yii2FlysystemGoogleDrive\GoogleDriveFilesystem::class,
             'clientId'     => 'xxx YOUR CLIENT ID xxx',
             'clientSecret' => 'xxx YOUR CLIENT SECRET xxx',
-            'refreshToken' => 'xxx YOU REFRESH TOKEN xxx',
+            'refreshToken' => 'xxx YOUR REFRESH TOKEN xxx',
+//             'driveId'     => 'xxx YOUR TEAM DRIVE ID xxx',
             // 'rootFolderId' => 'xxx ROOT FOLDER ID xxx'
         ],
     ],
