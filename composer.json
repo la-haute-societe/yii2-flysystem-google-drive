@@ -19,9 +19,9 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "~2.0.0",
-        "creocoder/yii2-flysystem": "~0.8.1",
-        "nao-pon/flysystem-google-drive": "~1.1"
+        "yiisoft/yii2": "^2.0.0",
+        "creocoder/yii2-flysystem": "^0.8.1",
+        "nao-pon/flysystem-google-drive": "^1.1"
     },
     "autoload": {
         "psr-4": {
